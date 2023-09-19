@@ -1,9 +1,10 @@
 package com.driver;
 
 public class BankAccount {
-    private String name;
+
+    private final String name;
     private double balance;
-    private double minBalance;
+    private final double minBalance;
 
     public BankAccount(String name, double balance, double minBalance) {
         this.name = name;
@@ -40,7 +41,7 @@ public class BankAccount {
         if (digits == -1 && sum == 0)
             return accountNo.toString();
 
-        return null;
+        throw new Exception("Account Number can not be generated");
     }
 
     public void deposit(double amount) {
