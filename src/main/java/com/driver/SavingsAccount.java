@@ -1,6 +1,6 @@
 package com.driver;
 
-public class SavingsAccount extends BankAccount{
+public class SavingsAccount extends BankAccount {
 
     double rate;
     double maxWithdrawalLimit;

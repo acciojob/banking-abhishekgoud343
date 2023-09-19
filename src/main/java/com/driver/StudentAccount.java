@@ -1,6 +1,6 @@
 package com.driver;
 
-public class StudentAccount extends BankAccount{
+public class StudentAccount extends BankAccount {
 
     String  institutionName;
 

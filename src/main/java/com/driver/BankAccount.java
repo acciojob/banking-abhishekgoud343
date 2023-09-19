@@ -2,9 +2,9 @@ package com.driver;
 
 public class BankAccount {
 
-    private final String name;
+    private String name;
     private double balance;
-    private final double minBalance;
+    private double minBalance;
 
     public BankAccount(String name, double balance, double minBalance) {
         this.name = name;
@@ -22,26 +22,25 @@ public class BankAccount {
         StringBuilder accountNo = new StringBuilder();
 
         while (digits-- > 0 && sum > 0) {
-            if (sum >= 9) {
-                accountNo.append(9);
+            if (sum > 9) {
+                accountNo.append("9");
                 sum -= 9;
             }
             else {
-                accountNo.append(sum);
+                accountNo.append(Integer.toString(sum));
                 sum = 0;
             }
         }
 
         while (digits-- > 0)
-            accountNo.append(0);
+            accountNo.append("0");
 
         return accountNo.toString();
     }
 
     public void deposit(double amount) {
         //add amount to balance
-        if (amount > 0)
-            balance += amount;
+        balance += amount;
     }
 
     public void withdraw(double amount) throws Exception {
