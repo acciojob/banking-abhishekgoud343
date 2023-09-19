@@ -19,23 +19,23 @@ public class BankAccount {
         if(digits * 9 < sum)
             throw new Exception("Account Number can not be generated");
 
-        StringBuilder accountNo = new StringBuilder();
+        String accountNo ="";
 
         while (digits-- > 0 && sum > 0) {
             if (sum > 9) {
-                accountNo.append("9");
+                accountNo += "9";
                 sum = sum - 9;
             }
             else {
-                accountNo.append(Integer.toString(sum));
+                accountNo += Integer.toString(sum);
                 sum = 0;
             }
         }
 
         while (digits-- > 0)
-            accountNo.append("0");
+            accountNo += "0";
 
-        return accountNo.toString();
+        return accountNo;
     }
 
     public void deposit(double amount) {
