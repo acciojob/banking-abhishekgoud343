@@ -36,11 +36,6 @@ public class BankAccount {
             --digits;
         }
 
-//        while (digits > 0) {
-//            accountNo.append(0);
-//            --digits;
-//        }
-
         return accountNo.toString();
     }
 
